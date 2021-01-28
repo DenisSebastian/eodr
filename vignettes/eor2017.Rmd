@@ -1,0 +1,41 @@
+---
+title: "eor2017"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{eor2017}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(eodr)
+```
+
+
+El objetivo de ete documento es 
+
+# Ejemplo 1
+
+## Conexion
+
+```{r}
+con <-  con_eod2017()
+```
+
+## Extraer Datos
+```{r}
+library(dplyr)
+actividad <-  tbl(con, "actividad") %>% collect()
+actividad
+```
+
+
+# Ejemplo 2
+# Ejemplo 3
