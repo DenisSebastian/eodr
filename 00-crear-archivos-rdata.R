@@ -3,8 +3,6 @@ library(RSQLite)
 library(usethis)
 library(dplyr)
 
-# finp <- list.files(path = "data_raw", pattern = "\\.tsv", full.names = T, recursive = T)
-
 #parto con la primera tabla (ISO5859-1 còdificación Windows)
 # double es 53 bites
 finp <- list.files("data-raw", pattern = "\\.tsv", full.names = T, recursive = T)
@@ -21,8 +19,8 @@ use_data(actividad)
 use_data(n[1])
 
 try(dir.create("inst"))
-try(dir.create("inst/data"))
-con <-  dbConnect(SQLite(), "inst/data/eod2017.sqlite")
+try(dir.create("inst/extdata"))
+con <-  dbConnect(SQLite(), "inst/extdata/eod2017.sqlite")
 
 for (i in seq_along(finp)) {
   d <-  read_delim(finp[i], delim = "\t")
