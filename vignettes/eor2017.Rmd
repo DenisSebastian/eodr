@@ -3,8 +3,10 @@ title: "eor2017"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{eor2017}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include = FALSE}
@@ -29,13 +31,26 @@ El objetivo de ete documento es
 con <-  con_eod2017()
 ```
 
+## Leer las Tablas exitentes
+
+```{r}
+tablas <- ver_tablas_eod2017()
+tablas
+```
+
+
 ## Extraer Datos
 ```{r}
 library(dplyr)
-actividad <-  tbl(con, "actividad") %>% collect()
+actividad <-  tabla(nombre = "actividad")
 actividad
 ```
 
 
 # Ejemplo 2
+
+```{r}
+
+```
+
 # Ejemplo 3
