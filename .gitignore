@@ -3,4 +3,5 @@
 *.zip
 *.tsv
 inst/doc
-data-raw
+/data-raw
+.DS_Store
